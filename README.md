@@ -3,7 +3,9 @@
 
 # 如何开始?
   1.把 multicast-1.0.jar 添加到您项目的classpath中去.
+
   2.编写一个类实现 MessageHandler 接口
+
   3.使用TiandeMulticastSocket关键类开启组播服务:
 
     MyMessageHandler handler = new MyMessageHandler();
