@@ -6,6 +6,8 @@
   2.编写一个类实现 MessageHandler 接口
   3.使用TiandeMulticastSocket关键类开启组播服务:
 
+    MyMessageHandler handler = new MyMessageHandler();
+
     TiandeMulticastSocket tiandeMulticastSocket = new TiandeMulticastSocket();
     tiandeMulticastSocket.setGroup("228.0.0.10");
     tiandeMulticastSocket.setIntervalSend(0);
