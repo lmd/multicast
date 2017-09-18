@@ -5,18 +5,18 @@
   1.把 multicast-1.0.jar 添加到您项目的classpath中去.
   2.编写一个类实现 MessageHandler 接口
   3.使用TiandeMulticastSocket关键类开启组播服务:
-    /* 开启接收监听 */
+
     TiandeMulticastSocket tiandeMulticastSocket = new TiandeMulticastSocket();
     tiandeMulticastSocket.setGroup("228.0.0.10");
     tiandeMulticastSocket.setIntervalSend(0);
     tiandeMulticastSocket.setReceiveTimeOut(2000);
     tiandeMulticastSocket.setBlockMaxSize(1024 * 50);
-    tiandeMulticastSocket.setReceivePacketSize(1024 * 60);
-		
+    tiandeMulticastSocket.setReceivePacketSize(1024 * 60);	
     tiandeMulticastSocket.registerHandler(handler);
     tiandeMulticastSocket.start();
 
   4.发送组播消息:
+
     TiandeMulticastMessage msg = new TiandeMulticastMessage();
     msg.setMethod("register");
     msg.setProperty("key", "value");
