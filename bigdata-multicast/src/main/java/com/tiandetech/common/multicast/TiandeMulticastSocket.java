@@ -251,5 +251,12 @@ public class TiandeMulticastSocket {
 		}
 		this.intervalSend = intervalSend;
 	}
-
+	
+	public boolean isEmptyHandler(){
+		if(this.pool == null || this.pool.getHanler() == null){
+			return true;
+		}else{
+			return false;
+		}
+	}
 }

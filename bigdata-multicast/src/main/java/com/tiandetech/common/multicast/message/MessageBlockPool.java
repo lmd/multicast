@@ -69,5 +69,9 @@ public class MessageBlockPool {
 		}
 		
 	}
+
+	public MessageHandler getHanler() {
+		return hanler;
+	}
 	
 }
